@@ -11,11 +11,11 @@ int main(int argc, char *argv[])
      splashscreen->show();
 
      //欢迎界面延时器3秒
-     QDateTime n=QDateTime::currentDateTime();
+     QDateTime n = QDateTime::currentDateTime();
      QDateTime now;
-     do{
-     now=QDateTime::currentDateTime();
-     } while (n.secsTo(now)<=1.5);
+     do {
+     now = QDateTime::currentDateTime();
+     } while (n.secsTo(now) <= 0.5);
     //主窗口
     MainWindow w;
     w.show();
