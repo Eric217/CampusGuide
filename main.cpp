@@ -2,6 +2,8 @@
 #include <QApplication>
 #include <QSplashScreen>
 #include <QDateTime>
+
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -16,9 +18,13 @@ int main(int argc, char *argv[])
      do {
      now = QDateTime::currentDateTime();
      } while (n.secsTo(now) <= 0.5);
+
+
     //主窗口
     MainWindow w;
     w.show();
+
+
 
     return a.exec();
 }

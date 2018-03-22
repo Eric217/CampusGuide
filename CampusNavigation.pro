@@ -25,10 +25,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    mybutton.cpp \
+    DrawLabel.cpp \
+    Network.cpp \
+    UndirectedNetwork.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    mybutton.h \
+    Common.h \
+    Network.h \
+    AdjacencyWDigraph.hpp \
+    AdjacencyWGraph.hpp \
+    LinkedQueue.hpp \
+    MinHeap.hpp \
+    DrawLabel.h \
+    UndirectedNetwork.h
 
 FORMS += \
         mainwindow.ui

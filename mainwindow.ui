@@ -38,7 +38,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonLibrary">
+   <widget class="MyButton" name="pushButton_ALibrary1">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -54,7 +54,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Gym">
+   <widget class="MyButton" name="pushButton_Gym18">
     <property name="geometry">
      <rect>
       <x>640</x>
@@ -70,7 +70,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm3">
+   <widget class="MyButton" name="pushButton_Dorm313">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -86,7 +86,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm4">
+   <widget class="MyButton" name="pushButton_Dorm414">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -102,7 +102,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm6">
+   <widget class="MyButton" name="pushButton_Dorm616">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -118,7 +118,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Bathroom">
+   <widget class="MyButton" name="pushButton_Bathroom2">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -134,7 +134,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm5">
+   <widget class="MyButton" name="pushButton_Dorm515">
     <property name="geometry">
      <rect>
       <x>436</x>
@@ -150,7 +150,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm2">
+   <widget class="MyButton" name="pushButton_Dorm212">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -166,7 +166,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Dorm1">
+   <widget class="MyButton" name="pushButton_Dorm111">
     <property name="geometry">
      <rect>
       <x>417</x>
@@ -182,7 +182,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_DiningHall">
+   <widget class="MyButton" name="pushButton_DiningHall8">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -198,7 +198,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Door1">
+   <widget class="MyButton" name="pushButton_Door19">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -214,7 +214,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Office">
+   <widget class="MyButton" name="pushButton_Office19">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -230,7 +230,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Block5">
+   <widget class="MyButton" name="pushButton_Block57">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -246,7 +246,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Block4">
+   <widget class="MyButton" name="pushButton_Block46">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -262,7 +262,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Block3">
+   <widget class="MyButton" name="pushButton_Block35">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -278,7 +278,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Teaching">
+   <widget class="MyButton" name="pushButton_TJiaoxue22">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -294,7 +294,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_ScienceOfTeaching">
+   <widget class="MyButton" name="pushButton_SJiaoyan21">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -310,7 +310,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Experiment">
+   <widget class="MyButton" name="pushButton_Experiment17">
     <property name="geometry">
      <rect>
       <x>192</x>
@@ -326,7 +326,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Door2">
+   <widget class="MyButton" name="pushButton_Door210">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -342,7 +342,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_ScienceOfExperiment">
+   <widget class="MyButton" name="pushButton_RKeyan20">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -358,7 +358,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Block1">
+   <widget class="MyButton" name="pushButton_Block13">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -374,7 +374,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_Block2">
+   <widget class="MyButton" name="pushButton_Block24">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -766,6 +766,13 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyButton</class>
+   <extends>QPushButton</extends>
+   <header>mybutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="image.qrc"/>
  </resources>

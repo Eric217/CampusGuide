@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "AdjacencyWGraph.hpp"
 #include <QMainWindow>
 
 namespace Ui {
@@ -15,6 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    AdjacencyWGraph<int> graph;
+
+
+
 private slots:
     void on_pushButtonLibrary_clicked();
 
@@ -28,6 +32,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void initButtons();
+    void initGraph();
 };
 
 #endif // MAINWINDOW_H
