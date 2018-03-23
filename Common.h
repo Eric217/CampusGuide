@@ -19,16 +19,15 @@ using namespace std;
 class NoMem {};
 class OutOfBounds {};
 
- 
-template <typename T>
-void make2DArray(T * * & arr, int row, int col) {
-    arr = new T * [row];
+
+inline void make2DArray(int * * & arr, int row, int col) {
+    arr = new int * [row];
     for (int i = 0; i < row; i ++ )
-        arr[i] = new T[col];
+        arr[i] = new int[col];
 }
 
-template <typename T>
-void delete2DArray(T * * & arr, int row) {
+
+inline void delete2DArray(int * * & arr, int row) {
     for (int i = 0; i < row; i ++)
         delete [] arr[i];
     delete [] arr;

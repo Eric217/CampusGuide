@@ -4,14 +4,16 @@
 
 class MyButton : public QPushButton
 {
+
+
+public:
     int id;
     QString name;
     QString info;
     //---------
-
-public:
     MyButton(QWidget *parent);
     void setupContents(int id, const QString & name, const QString & info);
+
 };
 
 #endif // MYBUTTON_H

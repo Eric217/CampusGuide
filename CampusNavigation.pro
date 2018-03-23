@@ -29,19 +29,21 @@ SOURCES += \
     mybutton.cpp \
     DrawLabel.cpp \
     Network.cpp \
-    UndirectedNetwork.cpp
+    UndirectedNetwork.cpp \
+    adjacencywdigraph.cpp \
+    adjacencywgraph.cpp
 
 HEADERS += \
         mainwindow.h \
     mybutton.h \
     Common.h \
     Network.h \
-    AdjacencyWDigraph.hpp \
-    AdjacencyWGraph.hpp \
     LinkedQueue.hpp \
     MinHeap.hpp \
     DrawLabel.h \
-    UndirectedNetwork.h
+    UndirectedNetwork.h \
+    AdjacencyWDigraph.h \
+    AdjacencyWGraph.h
 
 FORMS += \
         mainwindow.ui
