@@ -1,2 +1,2 @@
 # CampusGuide
-给同学 cyf 写的课设
+给同学写的课设

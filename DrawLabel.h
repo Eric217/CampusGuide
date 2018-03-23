@@ -4,8 +4,11 @@
 
 class DrawLabel : public QLabel
 {
+    Q_OBJECT
 public:
+
     DrawLabel(QWidget * parent);
+    void paintEvent(QPaintEvent *);
 };
 
 #endif // DRAWLABEL_H

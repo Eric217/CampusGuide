@@ -13,7 +13,8 @@
 using namespace std;
 
 #define NoEdge 10000
-#define Reached 1
+
+#define SITES 22
 
 class NoMem {};
 class OutOfBounds {};

@@ -16,18 +16,89 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete [] buttons;
     delete ui;
 }
 
 void MainWindow::initGraph() {
-    graph = AdjacencyWGraph<int>(22);
+    graph = AdjacencyWGraph<int>(SITES);
     graph.addEdge(1, 12, 80);
+    graph.addEdge(1, 21, 30);
+    graph.addEdge(1, 20, 40);
+    graph.addEdge(1, 3, 40);
+    graph.addEdge(1, 22, 50);
 
+    graph.addEdge(22, 21, 60);
+    graph.addEdge(21, 17, 10);
+    graph.addEdge(12, 21, 90);
+    graph.addEdge(20, 21, 50);
+    graph.addEdge(21, 3, 50);
+
+    graph.addEdge(17, 10, 10);
+    graph.addEdge(10, 20, 10);
+    graph.addEdge(9, 10, 15);
+
+    graph.addEdge(20, 22, 15);
+    graph.addEdge(20, 3, 10);
+    graph.addEdge(20, 12, 65);
+
+    graph.addEdge(22, 9, 25);
+    graph.addEdge(22, 19, 20);
+    graph.addEdge(22, 7, 15);
+    graph.addEdge(22, 3, 15);
+    graph.addEdge(22, 12, 80);
+
+    graph.addEdge(8, 9, 55);
+    graph.addEdge(7, 9, 25);
+    graph.addEdge(19, 9, 30);
+    graph.addEdge(8, 19, 20);
+    graph.addEdge(8, 13, 30);
+
+    graph.addEdge(7, 19, 15);
+    graph.addEdge(11, 19, 15);
+    graph.addEdge(7, 6, 5);
+    graph.addEdge(6, 5, 5);
+    graph.addEdge(4, 5, 5);
+    graph.addEdge(4, 3, 5);
+    graph.addEdge(3, 12, 65);
+
+    graph.addEdge(15, 12, 10);
+    graph.addEdge(15, 2, 10);
+    graph.addEdge(16, 2, 10);
+
+    graph.addEdge(11, 13, 20);
+    graph.addEdge(11, 12, 10);
+    graph.addEdge(14, 13, 30);
+    graph.addEdge(18, 13, 30);
+    graph.addEdge(14, 18, 10);
 
 }
 
-
 void MainWindow::initButtons() {
+    buttons = new MyButton * [SITES+1];
+    buttons[1] = ui->pushButton_ALibrary1;
+    buttons[2] = ui->pushButton_Bathroom2;
+    buttons[3] = ui->pushButton_Block13;
+    buttons[4] = ui->pushButton_Block24;
+    buttons[5] = ui->pushButton_Block35;
+    buttons[6] = ui->pushButton_Block46;
+    buttons[7] = ui->pushButton_Block57;
+    buttons[8] = ui->pushButton_DiningHall8;
+    buttons[9] = ui->pushButton_Door19;
+    buttons[10] = ui->pushButton_Door210;
+    buttons[11] = ui->pushButton_Dorm111;
+    buttons[12] = ui->pushButton_Dorm212;
+    buttons[13] = ui->pushButton_Dorm313;
+    buttons[14] = ui->pushButton_Dorm414;
+    buttons[15] = ui->pushButton_Dorm515;
+    buttons[16] = ui->pushButton_Dorm616;
+    buttons[17] = ui->pushButton_Experiment17;
+    buttons[18] = ui->pushButton_Gym18;
+    buttons[19] = ui->pushButton_Office19;
+    buttons[20] = ui->pushButton_RKeyan20;
+    buttons[21] = ui->pushButton_SJiaoyan21;
+    buttons[22] = ui->pushButton_TJiaoxue22;
+
     ui->pushButton_ALibrary1->setupContents(1, QString("Library"), QString("This is the only library"));
     ui->pushButton_Bathroom2->setupContents(2, QString("Bathroom"), QString("This is the only Bathroom"));
     ui->pushButton_Block13->setupContents(3, QString("Block1"), QString("Block1"));

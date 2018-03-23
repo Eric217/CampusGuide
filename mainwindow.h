@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "AdjacencyWGraph.hpp"
 #include <QMainWindow>
+#include "mybutton.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    MyButton ** buttons;
     AdjacencyWGraph<int> graph;
 
 

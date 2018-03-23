@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
      splashscreen->setPixmap(QPixmap(":/image/Initialization.png"));
      splashscreen->show();
 
+     MainWindow w;
      //欢迎界面延时器3秒
      QDateTime n = QDateTime::currentDateTime();
      QDateTime now;
@@ -19,9 +20,6 @@ int main(int argc, char *argv[])
      now = QDateTime::currentDateTime();
      } while (n.secsTo(now) <= 0.5);
 
-
-    //主窗口
-    MainWindow w;
     w.show();
 
 

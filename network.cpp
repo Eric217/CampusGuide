@@ -11,7 +11,7 @@ void Network::deactivatePos() {};
 
 
 bool Network::findPathDFS(int v, int end, int & l, int * path, int *reach) {
-    reach[v] = Reached;
+    reach[v] = 1;
     int u = beginIterator(v);
     while (u) {
         if (!reach[u]) {

@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="labelBackground">
+   <widget class="DrawLabel" name="labelBackground">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -771,6 +771,11 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
    <class>MyButton</class>
    <extends>QPushButton</extends>
    <header>mybutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DrawLabel</class>
+   <extends>QLabel</extends>
+   <header>DrawLabel.h</header>
   </customwidget>
  </customwidgets>
  <resources>
