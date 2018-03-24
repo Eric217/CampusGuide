@@ -19,6 +19,13 @@ using namespace std;
 class NoMem {};
 class OutOfBounds {};
 
+inline bool existIn(int * arr, int l, int v) {
+    for (int i = 0; i < l ; i++) {
+        if (arr[i] == v)
+            return 1;
+    }
+    return 0;
+}
 
 inline void make2DArray(int * * & arr, int row, int col) {
     arr = new int * [row];

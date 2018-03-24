@@ -489,9 +489,9 @@
    <widget class="QFrame" name="horizontalFrame">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>550</x>
       <y>10</y>
-      <width>461</width>
+      <width>381</width>
       <height>51</height>
      </rect>
     </property>
@@ -500,13 +500,13 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButtonMap">
+      <widget class="QPushButton" name="pushButtonPoints">
        <property name="styleSheet">
         <string notr="true">border-image: url(:/image/TitleImage/Background2.jpg);
 font: 75 13pt &quot;Kaiti SC&quot;;</string>
        </property>
        <property name="text">
-        <string>地图线路</string>
+        <string>多个点生成树</string>
        </property>
        <property name="icon">
         <iconset resource="image.qrc">
@@ -545,21 +545,6 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButtonDistance">
-       <property name="styleSheet">
-        <string notr="true">font: 13pt &quot;Kaiti SC&quot;;
-border-image: url(:/image/TitleImage/Background2.jpg);</string>
-       </property>
-       <property name="text">
-        <string>路径长度</string>
-       </property>
-       <property name="icon">
-        <iconset resource="image.qrc">
-         <normaloff>:/image/TitleImage/PButtonDistance.png</normaloff>:/image/TitleImage/PButtonDistance.png</iconset>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButtonAir">
        <property name="styleSheet">
         <string notr="true">font: 13pt &quot;Kaiti SC&quot;;
@@ -576,7 +561,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_LoginMain">
+   <widget class="QPushButton" name="loginStart">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -610,7 +595,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton_LoginNextCancel">
+    <widget class="QPushButton" name="loginCloseButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -626,7 +611,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_LoginNext">
+    <widget class="QPushButton" name="loginButton">
      <property name="geometry">
       <rect>
        <x>101</x>
@@ -635,12 +620,21 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
        <height>33</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Kaiti SC</family>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="styleSheet">
       <string notr="true">border-image: url(:/image/FrameImage/LoginNext.png);
 font: 13pt &quot;Kaiti SC&quot;;</string>
      </property>
      <property name="text">
-      <string/>
+      <string>登陆</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_26">
@@ -673,10 +667,10 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
    <widget class="DescLabel" name="infoPanel" native="true">
     <property name="geometry">
      <rect>
-      <x>-200</x>
+      <x>201</x>
       <y>390</y>
       <width>181</width>
-      <height>151</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -747,7 +741,7 @@ p, li { white-space: pre-wrap; }
        <x>5</x>
        <y>73</y>
        <width>60</width>
-       <height>16</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="text">
@@ -760,7 +754,7 @@ p, li { white-space: pre-wrap; }
        <x>10</x>
        <y>95</y>
        <width>161</width>
-       <height>51</height>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -771,6 +765,42 @@ p, li { white-space: pre-wrap; }
        <kerning>true</kerning>
       </font>
      </property>
+    </widget>
+    <widget class="QWidget" name="adminPanel" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>-1</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="saveChange">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保存</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteNode">
+      <property name="geometry">
+       <rect>
+        <x>58</x>
+        <y>20</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QFrame" name="frameSearch_2">
@@ -849,7 +879,7 @@ p, li { white-space: pre-wrap; }
       <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="close_search">
+    <widget class="QPushButton" name="search2_closeButton">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -865,6 +895,19 @@ p, li { white-space: pre-wrap; }
       <string/>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="multiPointConfirm">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>47</y>
+      <width>91</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
    </widget>
   </widget>
  </widget>

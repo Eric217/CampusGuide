@@ -13,7 +13,6 @@
 #include "UndirectedNetwork.h"
 #include <QList>
 
-bool existIn(int * arr, int l, int v);
 
 class AdjacencyWGraph : public AdjacencyWDigraph, public UndirectedNetwork {
     

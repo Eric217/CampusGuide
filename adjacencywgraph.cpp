@@ -24,16 +24,8 @@ void AdjacencyWGraph::output() const {
     }
 }
 
-bool existIn(int * arr, int l, int v) {
-    for (int i = 0; i < l ; i++) {
-        if (arr[i] == v)
-            return 1;
-    }
-    return 0;
-}
-
 QList<QPoint> AdjacencyWGraph::minSpanTree(int * a, int length) {
-
+    initializePos();
     QList<QPoint> result;
 
     int existedLength = 0;
@@ -69,7 +61,7 @@ QList<QPoint> AdjacencyWGraph::minSpanTree(int * a, int length) {
         }
 
     }
-
+    deactivatePos();
     delete[] existedArr;
     return result;
 

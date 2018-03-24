@@ -4,11 +4,6 @@
 #include <QMainWindow>
 #include "DrawLabel.h"
 
-#define ShortestPath QString("最短路径")
-#define Selecting QString("取消选择")
-#define AllPaths QString("全部路径")
-#define MultiPoints QString("多个点生成树")
-
 namespace Ui {
 class MainWindow;
 }
@@ -43,12 +38,13 @@ private:
     void initButtons();
     void initGraph();
     void onButtonClick(int id);
-    void initSelect(int status, int s1, int s2);
-    void initInfoPanel(MyButton *);
+    void setSelected(int status, int s1, int s2);
+    void moveInfoPanel(MyButton *);
     void hideInfoPanel();
     void drawPath();
     void clearPath();
-
+    void clickFuncs(int type);
+    void hideFloatingWidgets();
 
 private slots:
 
@@ -80,8 +76,14 @@ private slots:
     void on_pushButtonShortest_clicked();
     void on_pushButton_Clear_clicked();
     void on_button_fang_da_clicked();
-    void on_close_search_clicked();
     void on_button_go_clicked();
+    void on_pushButtonAll_clicked();
+    void on_pushButtonPoints_clicked();
+    void on_saveChange_clicked();
+    void on_deleteNode_clicked();
+    void on_loginButton_clicked();
+    void on_search2_closeButton_clicked();
+    void on_multiPointConfirm_clicked();
 };
 
 #endif // MAINWINDOW_H

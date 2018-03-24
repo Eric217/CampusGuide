@@ -3,13 +3,64 @@
 
 
 
-MainWindow::~MainWindow()
-{
-    delete [] siteNames;
-    delete [] buttons;
-    delete ui;
-    graph->Delete();
-    //delete graph;
+
+void MainWindow::on_multiPointConfirm_clicked() {
+    int len = selectArr.size();
+    if (len < 2)
+        return;
+    int * a = new int[len];
+    for (int i = 0; i < len; i++) {
+        a[i] = selectArr.first();
+        selectArr.removeFirst();
+    }
+    QList<QList<QPoint>> list;
+    list.append(graph->minSpanTree(a, len));
+    ui->labelBackground->drawPath(list);
+    setSelected(0, 0, 0);
+    delete[] a;
+}
+
+void MainWindow::on_pushButtonShortest_clicked() {
+    clickFuncs(1);
+}
+
+void MainWindow::on_pushButtonPoints_clicked() {
+    clickFuncs(3);
+}
+
+void MainWindow::on_pushButtonAll_clicked() {
+    clickFuncs(2);
+}
+
+void MainWindow::on_loginButton_clicked() {
+
+}
+
+void MainWindow::on_search2_closeButton_clicked() {
+    ui->frameSearch->show();
+    ui->frameSearch_2->hide();
+    ui->textEditSearch->clear();
+}
+
+void MainWindow::on_button_fang_da_clicked() {
+    clearPath();
+    setSelected(0, 0, 0);
+    ui->frameSearch->hide();
+    ui->frameSearch_2->show();
+    ui->textEdit_2->setText(ui->textEditSearch->toPlainText());
+    ui->textEdit->clear();
+}
+
+
+void MainWindow::on_pushButton_Clear_clicked() {
+    ui->textEditSearch->clear();
+}
+void MainWindow::on_button_go_clicked() {
+
+}
+
+void MainWindow::hideInfoPanel() {
+    ui->infoPanel->move(-200, 100);
 }
 
 void MainWindow::initGraph() {
@@ -110,7 +161,6 @@ void MainWindow::initButtons() {
         buttons[i]->setupContents(i, siteNames[i], siteInfos[i]);
 
 }
-
 
 /////////////////////////////////////////
 void MainWindow::on_pushButton_ALibrary1_clicked()
@@ -222,8 +272,3 @@ void MainWindow::on_pushButton_TJiaoxue22_clicked()
 {
 onButtonClick(22);
 }
-
-////////////////////////////
-
-
-
