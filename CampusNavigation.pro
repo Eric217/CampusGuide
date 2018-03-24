@@ -33,7 +33,8 @@ SOURCES += \
     adjacencywgraph.cpp \
     DescLabel.cpp \
     MyButton.cpp \
-    mainwindow_2.cpp
+    mainwindow_2.cpp \
+    common.cpp
 
 HEADERS += \
     Common.h \

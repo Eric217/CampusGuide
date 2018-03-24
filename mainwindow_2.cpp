@@ -3,6 +3,15 @@
 
 
 void MainWindow::on_saveChange_clicked() {
+
+    if (addingSite) {
+
+
+        return;
+    }
+
+
+
     int id = ui->buttonID->text().toInt();
     QString s1 = ui->buttonName->toPlainText().trimmed();
     if (s1.isEmpty())

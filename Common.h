@@ -14,7 +14,7 @@ using namespace std;
 
 #define NoEdge 10000
 
-#define SITES 22
+extern int SITES;
 
 class NoMem {};
 class OutOfBounds {};

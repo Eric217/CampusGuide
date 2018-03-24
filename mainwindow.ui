@@ -489,9 +489,9 @@
    <widget class="QFrame" name="horizontalFrame">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>480</x>
       <y>10</y>
-      <width>381</width>
+      <width>451</width>
       <height>51</height>
      </rect>
     </property>
@@ -499,6 +499,17 @@
      <string notr="true"/>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="addSite">
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/image/abc.png);
+font: 75 13pt &quot;Kaiti SC&quot;;</string>
+       </property>
+       <property name="text">
+        <string>添加景点</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="pushButtonPoints">
        <property name="styleSheet">

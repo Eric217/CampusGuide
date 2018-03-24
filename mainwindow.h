@@ -28,6 +28,7 @@ private:
     Ui::MainWindow *ui;
 
     bool isAdmin;
+    bool addingSite;
 
     ///状态0:正常，状态1:选两个点最短路径 状态2:选两个点全部路径 3 多点生成树
     int selectStatus;

@@ -48,5 +48,6 @@
         <file>image/SearchImage/SearchNextCancel.png</file>
         <file>image/end.png</file>
         <file>image/start.png</file>
+        <file>image/abc.png</file>
     </qresource>
 </RCC>

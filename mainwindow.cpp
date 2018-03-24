@@ -12,8 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->multiPointConfirm->hide();
 
     isAdmin = 0;
+    addingSite = 0;
     hideFloatingWidgets();
-
+    ui->addSite->hide();
     initButtons();
     initGraph();
 }
@@ -98,7 +99,17 @@ void MainWindow::clearPath() {
     ui->labelBackground->drawPath(QList<QList<QPoint>>());
 }
 
-void MainWindow::mouseReleaseEvent(QMouseEvent *) {
+void MainWindow::mouseReleaseEvent(QMouseEvent * e) {
+    if (addingSite) {
+        ui->infoPanel->move(e->pos());
+        ui->buttonID->setText(QString("%1").arg(SITES+1));
+        ui->buttonName->clear();
+        ui->buttonInfo->clear();
+        ui->adminPanel->show();
+
+        return;
+    }
+
     clearPath();
     hideInfoPanel();
 }
