@@ -7,7 +7,7 @@ class DrawLabel : public QLabel
 {
     Q_OBJECT
 
-    QList<QPoint> paths;
+    QList<QList<QPoint>> paths;
 
 public:
 
@@ -15,7 +15,7 @@ public:
     DrawLabel(QWidget * parent);
 
     void paintEvent(QPaintEvent *);
-    void drawPath(const QList<QPoint> &);
+    void drawPath(const QList<QList<QPoint>> &);
 };
 
 #endif // DRAWLABEL_H

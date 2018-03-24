@@ -32,7 +32,8 @@ SOURCES += \
     UndirectedNetwork.cpp \
     adjacencywdigraph.cpp \
     adjacencywgraph.cpp \
-    desclabel.cpp
+    DescLabel.cpp \
+    mainwindow_2.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,7 +46,9 @@ HEADERS += \
     UndirectedNetwork.h \
     AdjacencyWDigraph.h \
     AdjacencyWGraph.h \
-    desclabel.h
+    DescLabel.h \
+    Node.hpp \
+    LinkedStack.hpp
 
 FORMS += \
         mainwindow.ui

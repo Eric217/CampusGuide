@@ -1,4 +1,4 @@
-#include "desclabel.h"
+#include "DescLabel.h"
 
 DescLabel::DescLabel(QWidget *parent):QWidget(parent)
 {

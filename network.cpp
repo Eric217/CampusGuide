@@ -8,7 +8,39 @@ int Network::vertices() const { return 0; };
 void Network::initializePos() {};
 void Network::deactivatePos() {};
 
+void Network::findAllPathDFS(int v, int end, LinkedStack<int> & s, QList<QList<QPoint>> & list) {
+    s.push(v);
+    int u = beginIterator(v);
+    while (u) {
+        if (!s.contains(u)) {
+            if (u == end) {
+                QList<QPoint> l;
+                l.append(QPoint(u, s.top->data));
+                if (s.top->link) {
+                    Node<int> * temp = s.top;
+                    Node<int> * tempL = temp->link;
+                    while (tempL) {
+                        l.append(QPoint(temp->data, tempL->data));
+                        temp = tempL;
+                        tempL = tempL->link;
+                    }
+                }
+                list.append(l);
+            } else {
+                findAllPathDFS(u, end, s, list);
+                s.pop();
+            }
+        }
+        u = nextIterator(v);
+    }
+}
 
+void Network::findAllPath(int start, int end, QList<QList<QPoint>> & list) {
+    initializePos();
+    LinkedStack<int> s;
+    findAllPathDFS(start, end, s, list);
+    deactivatePos();
+}
 
 bool Network::findPathDFS(int v, int end, int & l, int * path, int *reach) {
     reach[v] = 1;

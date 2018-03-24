@@ -11,7 +11,9 @@
 
 #include "AdjacencyWDigraph.h"
 #include "UndirectedNetwork.h"
+#include <QList>
 
+bool existIn(int * arr, int l, int v);
 
 class AdjacencyWGraph : public AdjacencyWDigraph, public UndirectedNetwork {
     
@@ -24,6 +26,9 @@ public:
     int degree(int i) const { return this->outDegree(i); }
 
     void output() const;
+
+    QList<QPoint> minSpanTree(int * arr, int length);
+
 };
 
 

@@ -9,21 +9,12 @@
 #ifndef LinkedQueue_hpp
 #define LinkedQueue_hpp
 
-#include "Common.h"
-template <typename T> class LinkedQueue;
-
-template <typename T>
-class QueueNode {
-    friend class LinkedQueue<T>;
-    T data;
-    QueueNode<T> * link;
-};
-
+#include "Node.hpp"
 ///front = 0 时队列为空
 template <typename T>
 class LinkedQueue {
-    QueueNode<T> * front;
-    QueueNode<T> * rear;
+    Node<T> * front;
+    Node<T> * rear;
     
 public:
     LinkedQueue(): front(0), rear(0) {}
@@ -40,7 +31,7 @@ public:
 
 template <typename T>
 int LinkedQueue<T>::size() const {
-    QueueNode<T> * node = front;
+    Node<T> * node = front;
     int s = 0;
     while (node) {
         s++;
@@ -56,7 +47,7 @@ T * LinkedQueue<T>::output() const {
         return 0;
     int s = size();
     T * arr = new T[s];
-    QueueNode<T> * node = front;
+    Node<T> * node = front;
     for (int i = 0; i < s; i++) {
         arr[i] = node->data;
         node = node->link;
@@ -67,7 +58,7 @@ T * LinkedQueue<T>::output() const {
 template <typename T>
 LinkedQueue<T>::~LinkedQueue() {
     while (front) {
-        QueueNode<T> * node = front->link;
+        Node<T> * node = front->link;
         delete front;
         front = node;
     }
@@ -89,7 +80,7 @@ T LinkedQueue<T>::last() const {
 
 template <typename T>
 LinkedQueue<T> & LinkedQueue<T>::push(const T & t) {
-    QueueNode<T> * node = new QueueNode<T>;
+    Node<T> * node = new Node<T>;
     node->data = t;
     node->link = 0;
     if (front)
@@ -103,7 +94,7 @@ template <typename T>
 LinkedQueue<T> & LinkedQueue<T>::pop(T & r) {
     if (!front)
         throw OutOfBounds();
-    QueueNode<T> * node = front->link;
+    Node<T> * node = front->link;
     r = front->data;
     delete front;
     if (node)
