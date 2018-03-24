@@ -19,9 +19,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete graph;
+    delete [] siteNames;
     delete [] buttons;
     delete ui;
+    graph->Delete();
+    //delete graph;
 }
 
 void MainWindow::initGraph() {
@@ -110,34 +112,26 @@ void MainWindow::initButtons() {
     buttons[21] = ui->pushButton_SJiaoyan21;
     buttons[22] = ui->pushButton_TJiaoxue22;
 
-    ui->pushButton_ALibrary1->setupContents(1, QString("Library"), QString("This is the only library"));
-    ui->pushButton_Bathroom2->setupContents(2, QString("Bathroom"), QString("This is the only Bathroom"));
-    ui->pushButton_Block13->setupContents(3, QString("Block1"), QString("Block1"));
-    ui->pushButton_Block24->setupContents(4, QString("Block2"), QString("Block2"));
-    ui->pushButton_Block35->setupContents(5, QString("Block3"), QString("Block3"));
-    ui->pushButton_Block46->setupContents(6, QString("Block4"), QString("Block4"));
-    ui->pushButton_Block57->setupContents(7, QString("Block5"), QString("Block5"));
-    ui->pushButton_DiningHall8->setupContents(8, QString("DiningHall"), QString("Main DiningHall"));
-    ui->pushButton_Door19->setupContents(9, QString("Door1"), QString(" Door1"));
-    ui->pushButton_Door210->setupContents(10, QString("Door2"), QString(" Door2"));
-    ui->pushButton_Dorm111->setupContents(11, QString("Dorm1"), QString(" Dorm1"));
-    ui->pushButton_Dorm212->setupContents(12, QString("Dorm2"), QString(" Dorm2"));
-    ui->pushButton_Dorm313->setupContents(13, QString("Dorm3"), QString(" Dorm3"));
-    ui->pushButton_Dorm414->setupContents(14, QString("Dorm4"), QString(" Dorm4"));
-    ui->pushButton_Dorm515->setupContents(15, QString("Dorm5"), QString(" Dorm5"));
-    ui->pushButton_Dorm616->setupContents(16, QString("Dorm6"), QString(" Dorm6"));
-    ui->pushButton_Experiment17->setupContents(17, QString("Experiment"), QString(" Experiment Building"));
-    ui->pushButton_Gym18->setupContents(18, QString("Gym"), QString("This is the only Gym"));
-    ui->pushButton_Office19->setupContents(19, QString("Office"), QString("This is the only Office"));
-    ui->pushButton_RKeyan20->setupContents(20, QString("ScienceOfExp"), QString("This is the only ScienceOfExp"));
-    ui->pushButton_SJiaoyan21->setupContents(21, QString("ScienceOfTeach"), QString("This is the only ScienceOfTeach"));
-    ui->pushButton_TJiaoxue22->setupContents(22, QString("Teaching"), QString("This is the only Teaching"));
+    siteNames = new QString[SITES+1] {"", "图书馆","浴室","一区","二区","三区","四区",
+            "五区","食堂","一号门","二号门","一号宿舍楼","二号宿舍楼","三号宿舍楼",
+            "四号宿舍楼","五号宿舍楼","六号宿舍楼","实验楼",
+            "室外运动场","办公楼","科研楼","教研楼","教学楼"};
+
+    siteInfos = new QString[SITES+1] {"This is the only library", "Bathroom", "Block1",
+            "Block2", "Block3", "Block4", "Block5", "DiningHall", "Door1", "Door2",
+            "Dorm1", "Dorm2", "Dorm3", "Dorm4", "Dorm5", "Dorm6", "Experiment Building",
+            "Gym", "Office", "ScienceOfExp", "ScienceOfTeach", "Teaching"};
+
+    for (int i = 1; i <= SITES; i++)
+        buttons[i]->setupContents(i, siteNames[i], siteInfos[i]);
+
 }
 
 ///////////////////////////////////////////
 
 void MainWindow::onButtonClick(int id) {
 
+    clearPath();
     if (selectStatus == 0) {
         initInfoPanel(buttons[id]);
         return;
@@ -153,18 +147,14 @@ void MainWindow::onButtonClick(int id) {
                 return;
             select2 = id;
             drawPath();
-            //draw & repaint
             initSelect(0, 0, 0);
         }
 
     } else  {
 
-
     }
 
-
 }
-
 
 void MainWindow::drawPath() {
     int * dist = new int[SITES+1];
@@ -193,17 +183,19 @@ void MainWindow::drawPath() {
     delete[] pres;
 }
 
+void MainWindow::clearPath() {
+    ui->labelBackground->drawPath(QList<QPoint>());
+}
+
 void MainWindow::mouseReleaseEvent(QMouseEvent *) {
     hideInfoPanel();
 }
-
-
 
 void MainWindow::on_pushButtonShortest_clicked()
 {
     hideInfoPanel();
     if (ui->pushButtonShortest->text() == ShortestPath) {
-        //clear path
+        clearPath();
         initSelect(1, 0, 0);
     } else {
         initSelect(0, 0, 0);
@@ -239,31 +231,14 @@ void MainWindow::initSelect(int status, int s1, int s2) {
     }
 
 }
-///////////////////////////////////////////
-void MainWindow::on_pushButtonLibrary_clicked()
-{
-    ui->textEdit->hide();
-}
 
-void MainWindow::on_pushButton_25_clicked()
-{
-    ui->frameLogin->hide();
-}
 
-void MainWindow::on_pushButton_24_clicked()
-{
-    ui->frameLogin->show();
-}
-
-void MainWindow::on_pushButton_Clear_clicked()
-{
+///only this works
+void MainWindow::on_pushButton_Clear_clicked() {
     ui->textEditSearch->clear();
 }
 
-void MainWindow::on_pushButton_2_clicked()
-{
-    ui->frameSearch_2->hide();
-}
+
 
 /////////////////////////////////////////
 void MainWindow::on_pushButton_ALibrary1_clicked()
@@ -376,4 +351,23 @@ void MainWindow::on_pushButton_TJiaoxue22_clicked()
 onButtonClick(22);
 }
 
+////////////////////////////
+
+void MainWindow::on_button_fang_da_clicked() {
+    ui->frameSearch->hide();
+    ui->frameSearch_2->show();
+    ui->textEdit_2->setText(ui->textEditSearch->toPlainText());
+    ui->textEdit->clear();
+}
+
+void MainWindow::on_close_search_clicked() {
+    ui->frameSearch->show();
+    ui->frameSearch_2->hide();
+    ui->textEditSearch->clear();
+}
+
+void MainWindow::on_button_go_clicked()
+{
+
+}
 

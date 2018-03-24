@@ -23,6 +23,8 @@ public:
 
     MyButton ** buttons;
     AdjacencyWGraph * graph;
+    QString  *siteNames;
+    QString *siteInfos;
 
 protected:
     void mouseReleaseEvent(QMouseEvent *);
@@ -44,17 +46,11 @@ private:
     void initInfoPanel(MyButton *);
     void hideInfoPanel();
     void drawPath();
+    void clearPath();
 
 private slots:
-    void on_pushButtonLibrary_clicked();
 
-    void on_pushButton_25_clicked();
-
-    void on_pushButton_24_clicked();
-
-    void on_pushButton_Clear_clicked();
-
-    void on_pushButton_2_clicked();
+    /////////////////////////////////// 22个景点按钮
 
     void on_pushButton_ALibrary1_clicked();
 
@@ -100,9 +96,15 @@ private slots:
 
     void on_pushButton_TJiaoxue22_clicked();
 
+    /////////////////////////////////// 各个功能按钮
+
     void on_pushButtonShortest_clicked();
 
+    void on_pushButton_Clear_clicked();
 
+    void on_button_fang_da_clicked();
+    void on_close_search_clicked();
+    void on_button_go_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -16,7 +16,8 @@ int AdjacencyWDigraph::vertices() const {
 }
 
 AdjacencyWDigraph::~AdjacencyWDigraph() {
-    delete2DArray(arr, n+1);
+    if (arr != 0)
+        delete2DArray(arr, n+1);
 }
 
 void AdjacencyWDigraph::initializePos() {
@@ -27,6 +28,10 @@ void AdjacencyWDigraph::deactivatePos() {
     delete[] pos; pos = 0;
 }
 
+void AdjacencyWDigraph::Delete() {
+    delete2DArray(arr, n+1);
+    arr = 0;
+}
 
 
 

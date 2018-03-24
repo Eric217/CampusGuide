@@ -453,7 +453,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_23">
+    <widget class="QPushButton" name="button_fang_da">
      <property name="geometry">
       <rect>
        <x>205</x>
@@ -670,100 +670,7 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QFrame" name="frameSearch_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>241</width>
-      <height>211</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-image: url(:/image/SearchImage/backgroundSearch.png);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QPushButton" name="pushButtonByFoot">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>160</y>
-       <width>100</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/image/SearchImage/ButtonByfoot.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>102</x>
-       <y>8</y>
-       <width>32</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/image/SearchImage/Byfoot.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="geometry">
-      <rect>
-       <x>33</x>
-       <y>60</y>
-       <width>165</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="textEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>33</x>
-       <y>102</y>
-       <width>165</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_SearchNextIcon">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>20</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/image/SearchImage/SearchNextCancel.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="infoPanel" native="true">
+   <widget class="DescLabel" name="infoPanel" native="true">
     <property name="geometry">
      <rect>
       <x>-200</x>
@@ -782,9 +689,9 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>43</y>
+       <y>42</y>
        <width>161</width>
-       <height>28</height>
+       <height>30</height>
       </rect>
      </property>
      <property name="html">
@@ -866,15 +773,98 @@ p, li { white-space: pre-wrap; }
      </property>
     </widget>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QFrame" name="frameSearch_2">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>310</y>
-      <width>256</width>
-      <height>192</height>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>211</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/SearchImage/backgroundSearch.png);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="button_go">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>160</y>
+       <width>100</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/image/SearchImage/ButtonByfoot.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>102</x>
+       <y>8</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/image/SearchImage/Byfoot.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>60</y>
+       <width>165</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>102</y>
+       <width>165</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="close_search">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/image/SearchImage/SearchNextCancel.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -889,6 +879,12 @@ p, li { white-space: pre-wrap; }
    <class>DrawLabel</class>
    <extends>QLabel</extends>
    <header>DrawLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DescLabel</class>
+   <extends>QWidget</extends>
+   <header>desclabel.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

@@ -45,6 +45,7 @@ public:
     int vertices() const;
     int outDegree(int i) const;
     int inDegree(int i) const;
+    void Delete();
     
     AdjacencyWDigraph & addEdge(int i, int j, const int & w);
     AdjacencyWDigraph & deleteEdge(int i, int j);
