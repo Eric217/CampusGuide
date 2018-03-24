@@ -84,6 +84,8 @@ private slots:
     void on_loginButton_clicked();
     void on_search2_closeButton_clicked();
     void on_multiPointConfirm_clicked();
+    void on_loginStart_clicked();
+    void on_loginCloseButton_clicked();
 };
 
 #endif // MAINWINDOW_H

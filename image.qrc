@@ -46,5 +46,7 @@
         <file>image/SearchImage/ButtonByfoot.png</file>
         <file>image/SearchImage/TextEditAdd.png</file>
         <file>image/SearchImage/SearchNextCancel.png</file>
+        <file>image/end.png</file>
+        <file>image/start.png</file>
     </qresource>
 </RCC>

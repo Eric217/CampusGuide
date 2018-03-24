@@ -2,6 +2,35 @@
 #include "ui_mainwindow.h"
 
 
+void MainWindow::on_saveChange_clicked() {
+    int id = ui->buttonID->text().toInt();
+    QString s1 = ui->buttonName->toPlainText().trimmed();
+    if (s1.isEmpty())
+        return;
+    for (int i = 1; i <= SITES; i++) {
+        if (siteNames[i] == s1 && i != id)
+            return;
+    }
+    siteNames[id] = s1;
+    siteInfos[id] = ui->buttonInfo->toPlainText().trimmed();
+    buttons[id]->setupContents(id, s1, siteInfos[id]);
+    hideInfoPanel();
+}
+
+void MainWindow::on_deleteNode_clicked() {
+    int id = ui->buttonID->text().toInt();
+    graph->isolate(id);
+    buttons[id]->hide();
+    buttons[id]->setupContents(id, "__sa-mp_ma,e", "123");
+    hideInfoPanel();
+}
+
+void MainWindow::on_loginStart_clicked()
+{
+    clearPath();
+    hideFloatingWidgets();
+    ui->frameLogin->show();
+}
 
 
 void MainWindow::on_multiPointConfirm_clicked() {
@@ -33,7 +62,12 @@ void MainWindow::on_pushButtonAll_clicked() {
 }
 
 void MainWindow::on_loginButton_clicked() {
-
+    isAdmin = !isAdmin;
+    if (isAdmin)
+        ui->loginButton->setText("退出登陆");
+    else
+        ui->loginButton->setText("登陆");
+    ui->frameLogin->hide();
 }
 
 void MainWindow::on_search2_closeButton_clicked() {
@@ -42,8 +76,13 @@ void MainWindow::on_search2_closeButton_clicked() {
     ui->textEditSearch->clear();
 }
 
+void MainWindow::on_loginCloseButton_clicked() {
+    ui->frameLogin->hide();
+}
+
 void MainWindow::on_button_fang_da_clicked() {
     clearPath();
+    ui->frameLogin->hide();
     setSelected(0, 0, 0);
     ui->frameSearch->hide();
     ui->frameSearch_2->show();
@@ -55,7 +94,26 @@ void MainWindow::on_button_fang_da_clicked() {
 void MainWindow::on_pushButton_Clear_clicked() {
     ui->textEditSearch->clear();
 }
+
 void MainWindow::on_button_go_clicked() {
+    QString s1 = ui->textEdit->toPlainText().trimmed();
+    QString s2 = ui->textEdit_2->toPlainText().trimmed();
+    if (s1.isEmpty() || s2.isEmpty())
+        return;
+    select1 = 0; select2 = 0;
+    for (int i = 1; i <= SITES; i++) {
+        if (siteNames[i] == s1 || siteNames[i] == s2) {
+            if (!select1)
+                select1 = i;
+            else {
+                select2 = i;
+                selectStatus = 1;
+                drawPath();
+                setSelected(0, 0, 0);
+            }
+
+        }
+    }
 
 }
 

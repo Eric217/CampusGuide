@@ -8,11 +8,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     setFixedSize(1028,597);
     ui->setupUi(this);
-    ui->frameLogin->hide();
-    ui->frameSearch_2->hide();
+
     ui->multiPointConfirm->hide();
+
     isAdmin = 0;
-    hideInfoPanel();
+    hideFloatingWidgets();
 
     initButtons();
     initGraph();
@@ -99,11 +99,12 @@ void MainWindow::clearPath() {
 }
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *) {
+    clearPath();
     hideInfoPanel();
 }
 
 void MainWindow::clickFuncs(int type) {
-    hideInfoPanel();
+    hideFloatingWidgets();
     if (selectStatus == 0) {
         clearPath();
         setSelected(type, 0, 0);
@@ -125,6 +126,8 @@ void MainWindow::moveInfoPanel(MyButton * but) {
     ui->buttonInfo->setEnabled(isAdmin);
     if (isAdmin)
         ui->adminPanel->show();
+    else
+        ui->adminPanel->hide();
 
 }
 
@@ -154,12 +157,3 @@ void MainWindow::setSelected(int status, int s1, int s2) {
 
 
 
-void MainWindow::on_saveChange_clicked()
-{
-
-}
-
-void MainWindow::on_deleteNode_clicked()
-{
-
-}
