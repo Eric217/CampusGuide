@@ -453,7 +453,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="button_fang_da">
+    <widget class="QPushButton" name="pushButton_23">
      <property name="geometry">
       <rect>
        <x>205</x>
@@ -489,9 +489,9 @@
    <widget class="QFrame" name="horizontalFrame">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>470</x>
       <y>10</y>
-      <width>451</width>
+      <width>461</width>
       <height>51</height>
      </rect>
     </property>
@@ -500,24 +500,13 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="addSite">
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/image/abc.png);
-font: 75 13pt &quot;Kaiti SC&quot;;</string>
-       </property>
-       <property name="text">
-        <string>添加景点</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButtonPoints">
+      <widget class="QPushButton" name="pushButtonMap">
        <property name="styleSheet">
         <string notr="true">border-image: url(:/image/TitleImage/Background2.jpg);
 font: 75 13pt &quot;Kaiti SC&quot;;</string>
        </property>
        <property name="text">
-        <string>多个点生成树</string>
+        <string>地图线路</string>
        </property>
        <property name="icon">
         <iconset resource="image.qrc">
@@ -556,6 +545,21 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButtonDistance">
+       <property name="styleSheet">
+        <string notr="true">font: 13pt &quot;Kaiti SC&quot;;
+border-image: url(:/image/TitleImage/Background2.jpg);</string>
+       </property>
+       <property name="text">
+        <string>路径长度</string>
+       </property>
+       <property name="icon">
+        <iconset resource="image.qrc">
+         <normaloff>:/image/TitleImage/PButtonDistance.png</normaloff>:/image/TitleImage/PButtonDistance.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButtonAir">
        <property name="styleSheet">
         <string notr="true">font: 13pt &quot;Kaiti SC&quot;;
@@ -572,7 +576,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="loginStart">
+   <widget class="QPushButton" name="pushButton_LoginMain">
     <property name="geometry">
      <rect>
       <x>950</x>
@@ -606,7 +610,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="loginCloseButton">
+    <widget class="QPushButton" name="pushButton_LoginNextCancel">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -622,7 +626,7 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="loginButton">
+    <widget class="QPushButton" name="pushButton_LoginNext">
      <property name="geometry">
       <rect>
        <x>101</x>
@@ -631,21 +635,12 @@ border-image: url(:/image/TitleImage/Background2.jpg);</string>
        <height>33</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Kaiti SC</family>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
      <property name="styleSheet">
       <string notr="true">border-image: url(:/image/FrameImage/LoginNext.png);
 font: 13pt &quot;Kaiti SC&quot;;</string>
      </property>
      <property name="text">
-      <string>登陆</string>
+      <string/>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_26">
@@ -675,150 +670,11 @@ font: 13pt &quot;Kaiti SC&quot;;</string>
      </property>
     </widget>
    </widget>
-   <widget class="DescLabel" name="infoPanel" native="true">
-    <property name="geometry">
-     <rect>
-      <x>201</x>
-      <y>390</y>
-      <width>181</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(231, 231, 231);</string>
-    </property>
-    <widget class="QTextEdit" name="buttonName">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>42</y>
-       <width>161</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;NULL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>0</y>
-       <width>41</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>编号：</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="buttonID">
-     <property name="geometry">
-      <rect>
-       <x>45</x>
-       <y>0</y>
-       <width>100</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>21</y>
-       <width>60</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>名称：</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>5</x>
-       <y>73</y>
-       <width>60</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>简介：</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="buttonInfo">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>95</y>
-       <width>161</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <kerning>true</kerning>
-      </font>
-     </property>
-    </widget>
-    <widget class="QWidget" name="adminPanel" native="true">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>-1</y>
-       <width>121</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <widget class="QPushButton" name="saveChange">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>20</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>保存</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="deleteNode">
-      <property name="geometry">
-       <rect>
-        <x>58</x>
-        <y>20</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>删除</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QFrame" name="frameSearch_2">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>50</y>
       <width>241</width>
       <height>211</height>
      </rect>
@@ -832,7 +688,7 @@ p, li { white-space: pre-wrap; }
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="button_go">
+    <widget class="QPushButton" name="pushButtonByFoot">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -890,7 +746,7 @@ p, li { white-space: pre-wrap; }
       <string notr="true">border-image: url(:/image/SearchImage/TextEditAdd.png);</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="search2_closeButton">
+    <widget class="QPushButton" name="pushButton_SearchNextIcon">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -906,52 +762,109 @@ p, li { white-space: pre-wrap; }
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>42</y>
-       <width>58</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/image/start.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>87</y>
-       <width>58</width>
-       <height>58</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-image: url(:/image/end.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
    </widget>
-   <widget class="QPushButton" name="multiPointConfirm">
+   <widget class="QWidget" name="infoPanel" native="true">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>47</y>
-      <width>91</width>
-      <height>32</height>
+      <x>-200</x>
+      <y>390</y>
+      <width>181</width>
+      <height>151</height>
      </rect>
     </property>
-    <property name="text">
-     <string>确定</string>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(231, 231, 231);</string>
+    </property>
+    <widget class="QTextEdit" name="buttonName">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>43</y>
+       <width>161</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;NULL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>0</y>
+       <width>41</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>编号：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="buttonID">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>0</y>
+       <width>100</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>21</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>名称：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>73</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>简介：</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="buttonInfo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>95</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
@@ -966,12 +879,6 @@ image: url(:/image/end.png);</string>
    <class>DrawLabel</class>
    <extends>QLabel</extends>
    <header>DrawLabel.h</header>
-  </customwidget>
-  <customwidget>
-   <class>DescLabel</class>
-   <extends>QWidget</extends>
-   <header>desclabel.h</header>
-   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

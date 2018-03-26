@@ -9,15 +9,13 @@
 #ifndef Network_h
 #define Network_h
 
-#include <QList>
 #include "LinkedQueue.hpp"
-#include "LinkedStack.hpp"
+
 
 class Network {
     void depthSearch(int, int *, int label);
     bool findPathDFS(int, int, int &, int *, int *);
-    void findAllPathDFS(int, int, LinkedStack<int> &, QList<QList<QPoint>> &);
-
+    
 public:
     virtual int beginIterator(int i);
     virtual int nextIterator(int i);
@@ -30,7 +28,7 @@ public:
     void depthFSearch(int v, int * reach, int label);
     ///寻找一条路径, 写入路径长度、路径path，返回是否找到
     bool findPath(int start, int end, int & length, int * path);
-    void findAllPath(int, int, QList<QList<QPoint>> &);
+    
 };
 
 #endif /* Network_h */

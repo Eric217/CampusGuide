@@ -16,8 +16,7 @@ int AdjacencyWDigraph::vertices() const {
 }
 
 AdjacencyWDigraph::~AdjacencyWDigraph() {
-    if (arr != 0)
-        delete2DArray(arr, n+1);
+    delete2DArray(arr, n+1);
 }
 
 void AdjacencyWDigraph::initializePos() {
@@ -28,17 +27,7 @@ void AdjacencyWDigraph::deactivatePos() {
     delete[] pos; pos = 0;
 }
 
-void AdjacencyWDigraph::Delete() {
-    delete2DArray(arr, n+1);
-    arr = 0;
-}
 
-void AdjacencyWDigraph::isolate(int p) {
-    for (int i = 1; i <= n; i++) {
-        arr[p][i] = NoEdge;
-        arr[i][p] = NoEdge;
-    }
-}
 
 
 ///需要一个数组标记顶点i是否在路径中，dist标记路径外的点通过以生成的路径到起始点的最短距离。pre标记顶点i的前一个点。
