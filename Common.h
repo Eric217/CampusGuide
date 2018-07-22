@@ -1,10 +1,10 @@
 //
 //  Common.h
 //  10.1_图
-//  test modify
+//  fixed bug
 //  Created by Eric on 19/03/2018.
 //  Copyright © 2018 Eric. All rights reserved.
-//
+//  学习git
 
 #ifndef Common_h
 #define Common_h
